@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class='card'>
+    <% for(var i=0; i < project.length; i++) { %>
+    <div class="c1">
+     <h1><%= project[i].titre %></h1> 
+      <p><%= project[i].description %></p>
+      <img src="/image/<%= project[i].image %>" />
+    </div>
+    <% } %>
+  </div>
+
+
+
+  <form action="/index/creer-post" method="POST">
+    <label for="titre_2">nom</label>
+    <input type="text" name="titre_2" id="titre_2">
+    <input type="submit" name="submit_2" id="submit_2">
+  </form>
+</body>
+
+</html>

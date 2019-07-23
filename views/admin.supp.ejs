@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Supprimer des elts ds la BDD</title>
+</head>
+<body>
+    <form action="/admin/delete" method="POST">
+    
+    <input type="hidden" name="id" value="<%= project[i].titre._id %>">
+    <input type="submit" name="submit" id="submit">
+    </form>
+
+    <div class="container-img">
+        <img src="../image/<%=project[i].image%>">
+    </div>
+
+    <div class="titre">
+        <h3><%= project[i].titre %></h3>
+    </div>
+
+</body>
+</html>

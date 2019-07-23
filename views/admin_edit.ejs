@@ -1,0 +1,12 @@
+<h1>modifier les projets</h1>
+
+    <div class="c1">
+            <form method="POST" action='/edit/<%= project._id %>' >
+      <label for="titre">titre</label><br><br>
+    <input type="text" name="titre" id="titre" value="<%= project.titre %>">
+    <label for="description">description</label><br><br>
+    <textarea name="description" id="description" cols="30" rows="10"><%= project.description %></textarea>
+        <input type="submit">
+
+      </form>
+    </div>

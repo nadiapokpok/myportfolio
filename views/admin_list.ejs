@@ -1,0 +1,14 @@
+<% for(var i=0; i < projects.length; i++) { %>
+    <div class="c1">
+     <h1><%= projects[i].titre %></h1> 
+      <p><%= projects[i].description %></p>
+      <img src="/image/<%= projects[i].image %>" />
+      <form method="GET" action='/edit/<%= projects[i]._id %>'>
+        <button type="submit">edit</button>
+      </form>
+      <form method="POST" action='/admin.supp/delete/<%= projects[i]._id %>'>
+        <button type="submit">delete</button>
+
+      </form>
+    </div>
+    <% } %>
